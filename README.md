@@ -25,7 +25,6 @@ A standard linear regression model was fitted:
 
 This approach is inappropriate for longitudinal data.
 
----
 
 ### 2. Mixed-Effects Model (Random Intercept)
 
@@ -36,16 +35,12 @@ A linear mixed-effects model was fitted with:
 
 This accounts for individual baseline differences.
 
----
-
 ### 3. Mixed-Effects Model (Random Slope)
 
 An extended model was fitted allowing:
 
 - Subject-specific slopes for age  
 - Captures individual growth trajectories over time  
-
----
 
 ### 4. Model Comparison
 
@@ -72,6 +67,12 @@ Such models are widely used in clinical research, longitudinal studies, and epid
 
 - R
 - nlme package
+
+## Results
+
+### Longitudinal Data Visualization
+
+![Longitudinal Plot](longitudinal_plot.png)
 
 ## Author
 
