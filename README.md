@@ -84,7 +84,7 @@ Such models are widely used in clinical research, longitudinal studies, and epid
 
 ### Longitudinal Data Visualization
 
-![Longitudinal Plot](longitudinal_plot.png)
+![Longitudinal Plot](longitudinal_plot_v2.png)
 
 ## Future Work
 
