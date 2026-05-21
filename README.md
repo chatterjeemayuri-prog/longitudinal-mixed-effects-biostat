@@ -2,7 +2,9 @@
 
 ## Objective
 
-The objective of this project is to analyze repeated measurements data and demonstrate the importance of using mixed-effects models when observations are correlated within subjects over time.
+Longitudinal and repeated-measurements data commonly arise in healthcare and clinical research, where multiple observations are collected from the same individual over time. In these settings, observations within subjects are correlated, making standard linear regression models inappropriate.
+
+The objective of this project is to demonstrate how mixed-effects models account for within-subject correlation and subject-level variability in longitudinal data.
 
 ## Dataset
 
@@ -14,6 +16,10 @@ This dataset contains repeated measurements of dental distance for multiple subj
 - **Subject**: individual identifier (repeated observations)
 - **Sex**: grouping variable
 
+## Statistical Question
+
+How does accounting for subject-specific variability influence model fit and interpretation compared with ordinary linear regression that ignores repeated measurements?
+
 ## Methods
 
 ### 1. Naive Linear Regression
@@ -23,7 +29,7 @@ A standard linear regression model was fitted:
 - Assumes independence of observations  
 - Ignores repeated measurements within subjects  
 
-This approach is inappropriate for longitudinal data.
+This approach ignores within-subject dependence and may lead to misleading inference.
 
 
 ### 2. Mixed-Effects Model (Random Intercept)
@@ -44,7 +50,7 @@ An extended model was fitted allowing:
 
 ### 4. Model Comparison
 
-Models were compared using AIC to evaluate goodness of fit.
+Models were compared using AIC and likelihood-based measures to evaluate goodness of fit and the impact of accounting for subject-level variability.
 
 ## Key Findings
 
@@ -63,6 +69,12 @@ Mixed-effects models address this by incorporating random effects, allowing both
 
 Such models are widely used in clinical research, longitudinal studies, and epidemiology, where repeated observations per individual are common.
 
+## Limitations
+
+- The dataset is relatively small and primarily intended for methodological illustration.
+- Linear mixed-effects models assume Gaussian random effects and residual distributions.
+- More complex longitudinal settings may require generalized or Bayesian mixed-effects models.
+
 ## Tools Used
 
 - R
@@ -73,6 +85,10 @@ Such models are widely used in clinical research, longitudinal studies, and epid
 ### Longitudinal Data Visualization
 
 ![Longitudinal Plot](longitudinal_plot.png)
+
+## Future Work
+
+Possible extensions include generalized mixed-effects models, multivariate longitudinal analysis, Bayesian hierarchical modelling, and robustness diagnostics for influential observations.
 
 ## Author
 
